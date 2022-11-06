@@ -34,7 +34,7 @@ module.exports = {
     if(parseInt(map.get(message.author.id)) > Date.now()) return message.reply({ content: `❌ توجد جولة بالفعل، عليك التحويل لإتمام الجولة معك 3 دقائق.` });
     map.set(message.author.id, Date.now() + 60000 * 3);
     message.reply({content: `c 773516646416384030 26316 ,${message.author}`, embeds: [embed]}).then(async msg => {
-      let trans_msg = `**:moneybag: | ${message.author.username}, has transferred \`$1\` to <@!773516646416384030> **`;
+      let trans_msg = `**:moneybag: | ${message.author.username}, has transferred \`$25000\` to <@!773516646416384030> **`;
       let collect = await message.channel.awaitMessages({ filter: mm => mm.author.id == config.probot_id && mm.content == trans_msg, max: 1, time: 60000 * 3, errors: ["time"] }).catch(() => {
         map.set(message.author.id, 0);
         msg.delete().catch(() => 0);
