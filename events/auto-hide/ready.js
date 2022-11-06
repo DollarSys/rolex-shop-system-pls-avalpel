@@ -1,4 +1,4 @@
-const cron = require("node-cron");
+/*const cron = require("node-cron");
 const config = require("../../config.json");
 
 module.exports = {
@@ -40,4 +40,4 @@ module.exports = {
       timezone: "Egypt"
     });
   }
-}
+}*/
