@@ -31,7 +31,7 @@ module.exports = {
     .setDescription(`**للـ بدء عليك إولا ، تحويل مبلغ 25 الف. لـ <@773516646416384030>
     في حال خمولك لـ مدة اكثر من 3 دقايق ، سيتم إعلاق الجولة تلقائي.**`);
     message.reply({content: `c 773516646416384030 26316 ,${message.author}`, embeds: [embed]}).then(async msg => {
-      let trans_msg = `**:moneybag: | ${message.author.username}, has transferred \`$1\` to <@!${config.bank_id}> **`;
+      let trans_msg = `**:moneybag: | ${message.author.username}, has transferred \`$25000\` to <@!${config.bank_id}> **`;
       let collect = await message.channel.awaitMessages({ filter: mm => mm.author.id == config.probot_id && mm.content == trans_msg, max: 1, time: 60000 * 3, errors: ["time"] }).catch(() => {
         map.set(message.author.id, 0);
         msg.delete().catch(() => 0);
