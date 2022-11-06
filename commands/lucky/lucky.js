@@ -45,7 +45,7 @@ module.exports = {
       })
       collect = collect.first();
       if (!collect) return;
-      message.channel.send("50 الف.").then((msgg) => {
+      message.channel.send({ content: `${message.author}, 50 الف.` }).then((msgg) => {
         let a1 = ("Good's");
         let a2 = ("100 الف.");
         let a3 = ("150 الف.");
