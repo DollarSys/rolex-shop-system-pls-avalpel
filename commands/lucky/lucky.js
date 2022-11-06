@@ -59,21 +59,21 @@ module.exports = {
         let a9 = ("15 الف.");
         let a10 = ("نيترو قيمنق.");
         let a12 = ("40 الف.");
-        setTimeout(() => msgg.edit(${message.author , a1}).catch(() => 0), 1000);
-        setTimeout(() => msgg.edit(${message.author , a2}).catch(() => 0), 1500);
-        setTimeout(() => msgg.edit(${message.author , a3}).catch(() => 0), 3500);
-        setTimeout(() => msgg.edit(${message.author , a4}).catch(() => 0), 4500);
-        setTimeout(() => msgg.edit(${message.author , a5}).catch(() => 0), 5500);
-        setTimeout(() => msgg.edit(${message.author , a6}).catch(() => 0), 6500);
-        setTimeout(() => msgg.edit(${message.author , a7}).catch(() => 0), 7500);
-        setTimeout(() => msgg.edit(${message.author , a8}).catch(() => 0), 8500);
-        setTimeout(() => msgg.edit(${message.author , a9}).catch(() => 0), 9500);
-        setTimeout(() => msgg.edit(${message.author , a10}).catch(() => 0), 10500);
-        setTimeout(() => msgg.edit(${message.author , a12}).catch(() => 0), 11500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 1000);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 1500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 3500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 4500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 5500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 6500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 7500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 8500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 9500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 10500);
+        setTimeout(() => msgg.edit({content: ${message.author}, ${a1}}).catch(() => 0), 11500);
         setTimeout(() => msgg.delete().catch(() => 0), 12500);
         let va1 = mess[Math.floor(Math.random() * mess.length)];
-        setTimeout(() => message.channel.send(`${message.author , va1}`).catch(() => 0), 13000);
-        setTimeout(() => message.channel.send(`${line}`).catch(() => 0), 13000);
+        setTimeout(() => message.channel.send({ content: `${message.author}, ${va1}`}).catch(() => 0), 13000);
+        setTimeout(() => message.channel.send({ content: `${line}`}).catch(() => 0), 13000);
       })
       map.set(message.author.id, 0);
     })
