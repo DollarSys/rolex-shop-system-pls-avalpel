@@ -25,7 +25,7 @@ module.exports = {
   name: "lucky",
   run: async(client, message) => {
     if(!message.channel.name.startsWith("ticket-")) return message.reply("لا يمكن إستخدام الأمر خارج التذكرة ، إفتح تذكرة من هنا <#999294539040829450>")
-    if (luckydata.has(message.author.id)) return;
+  //  if (luckydata.has(message.author.id)) return;
     let embed = new Discord.EmbedBuilder()
     .setTitle(`# Roléx Owner's.`)
     .setDescription(`**للـ بدء عليك إولا ، تحويل مبلغ 25 الف. لـ <@773516646416384030>
@@ -68,10 +68,10 @@ module.exports = {
         setTimeout(() => message.channel.send(`${va1}`).catch(() => 0), 13000);
         setTimeout(() => message.channel.send(`${line}`).catch(() => 0), 13000);
     })
-      luckydata.add(message.author.id)
-      setTimeout(() => {
-      luckydata.delete(message.author.id)
-    },60000 * 3)
+     // luckydata.add(message.author.id)
+   //   setTimeout(() => {
+   //   luckydata.delete(message.author.id)
+//       },60000 * 3)
     })
   }
 }
