@@ -17,6 +17,7 @@ module.exports = {
     https://cdn.discordapp.com/attachments/986263839207211028/1026819732260798585/unknown.png`).then(async (msg) => {
       const line1 = "خط";
       let collect = await message.channel.awaitMessages({ filter: mm => mm.author.id == message.author.id && mm.content == line1, max: 0, time: 60000 * 5, errors: ["time"] }).catch(() => {
+        map.set(message.author.id, 0);
         msg.delete().catch(() => 0);
         let logline = new Discord.ButtonBuilder()
         .setStyle(Discord.ButtonStyle.Primary)
