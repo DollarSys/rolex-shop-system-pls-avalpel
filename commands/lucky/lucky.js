@@ -29,12 +29,13 @@ module.exports = {
     if (luckydata.has(message.author.id)) return;
     let embed = new Discord.EmbedBuilder()
     .setTitle(`# Roléx Owner's.`)
+    .setImage(`https://cdn.discordapp.com/attachments/999294509223530597/1037111209108979732/Record_2022_11_01_23_06_23_255.gif`)
     .setDescription(`**للـ بدء عليك إولا ، تحويل مبلغ 25 الف. لـ \<@773516646416384030> \`-#\`
 معك 3 دقائق فقط ، لتحويل مبلغ 25 الف كريدت بالضرايب:
 للتحويل، اكتب:
 \`C 773516646416384030 26316\` 
 ويوجد هنا شرح تفصيلي لـ كيفية اللعب. \<#999294509223530597>**`);
-    .setImage(`https://cdn.discordapp.com/attachments/999294509223530597/1037111209108979732/Record_2022_11_01_23_06_23_255.gif`)
+    
     if(parseInt(map.get(message.author.id)) > Date.now()) return message.reply({ content: `❌ توجد جولة بالفعل، عليك التحويل لإتمام الجولة معك 3 دقائق.` });
     map.set(message.author.id, Date.now() + 60000 * 3);
     message.reply({content: `c 773516646416384030 26316 ,${message.author}`, embeds: [embed]}).then(async msg => {
