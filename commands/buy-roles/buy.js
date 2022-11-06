@@ -18,7 +18,7 @@ module.exports = {
     map.set(message.author.id, Date.now() + 121000);
     let menu = new Discord.SelectMenuBuilder()
       .setCustomId(`order`)
-      .setPlaceholder('اختر الرتبة التي تريد شراءها')
+      .setPlaceholder('✋.إضعط هنا ، وقم بإختيار الرتبة الي تريد شرائهأ')
       .addOptions(data.roles.map(r => ({
         label: `${message.guild.roles.cache.get(r.role) ? message.guild.roles.cache.get(r.role).name : r.role}`,
         description: `Get ${message.guild.roles.cache.get(r.role) ? message.guild.roles.cache.get(r.role).name : r.role} right now for only ${r.price} credits!`,
@@ -27,7 +27,7 @@ module.exports = {
     let row = new Discord.ActionRowBuilder()
       .addComponents(menu);
     let embed = new Discord.EmbedBuilder()
-      .setDescription(`اختر الرتبة التي تريد شراءها من القائمة التالية.`)
+      .setDescription(`اهلََا ومرحبََا ، لـ شراء رتب قم بإختيار الرتبة التي تريد شرائها من القائمة بالإسفل.👇`)
       .setAuthor({ name: message.guild.name, iconURL: message.guild.icon ? message.guild.iconURL({ dynamic: true }) : null });
     message.reply({ embeds: [embed], components: [row] }).then(async msg => {
       let collect = await msg.awaitMessageComponent({ filter: b => b.user.id == message.author.id, max: 1, time: 60000, errors: ["time"] }).catch((err) => map.set(message.author.id, 0));
