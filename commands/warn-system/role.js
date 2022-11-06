@@ -6,10 +6,10 @@ module.exports = {
   run: async (client, message, args) => {
     if(!message.member.roles.cache.has(config.warn_admin)) return;
     let user = args[0] ? message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(() => 0) : null;
-    if(!user) return message.reply({ content: `❌ **Please provide a user.**` });
-    if(user.user.id == message.author.id) return message.reply({ content: `❌ You can't add roles to yourself.` });
+    if(!user) return message.reply({ content: `❌ **منشن الشخص الذي تريد إعطائة رتبة.**` });
+    if(user.user.id == message.author.id) return message.reply({ content: `❌ لا تستطيع إعطاء رتب لنفسك.` });
     let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[1]) || message.guild.roles.cache.find(r => r.name === args.slice(1).join(" "));
-    if(!role || role.managed) return message.reply({ content: `❌ Please provide a role.` });
+    if(!role || role.managed) return message.reply({ content: `❌ منشن الرتبة او اكتب اسمها.` });
     let data = await db.findOne({
       id: message.guild.id
     });
@@ -17,10 +17,10 @@ module.exports = {
     if(!user.roles.cache.has(role.id)) {
       user.roles.add(role).catch(() => 0);
       user.roles.add(config.seller_role).catch(() => 0);
-      message.reply({ content: `Done add **${role.name}** to **@${user.user.tag}**` });
+      message.reply({ content: `Done add **${role.name}** to **<@${user.user.id}>** ✅` });
     } else {
       user.roles.remove(role).catch(() => 0);
-      message.reply({ content: `Done remove **${role.name}** from **@${user.user.tag}**` });
+      message.reply({ content: `Done remove **${role.name}** from **<@${user.user.id}>** ❌` });
     }
   }
 }
