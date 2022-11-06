@@ -29,8 +29,12 @@ module.exports = {
     if (luckydata.has(message.author.id)) return;
     let embed = new Discord.EmbedBuilder()
     .setTitle(`# Roléx Owner's.`)
-    .setDescription(`**للـ بدء عليك إولا ، تحويل مبلغ 25 الف. لـ <@773516646416384030>
-    في حال خمولك لـ مدة اكثر من 3 دقايق ، سيتم إعلاق الجولة تلقائي.**`);
+    .setDescription(`**للـ بدء عليك إولا ، تحويل مبلغ 25 الف. لـ \<@773516646416384030> \`-#\`
+معك 3 دقائق فقط ، لتحويل مبلغ 25 الف كريدت بالضرايب:
+للتحويل، اكتب:
+\`C 773516646416384030 26316\` 
+ويوجد هنا شرح تفصيلي لـ كيفية اللعب. \<#999294509223530597>**`);
+    .setImage(`https://cdn.discordapp.com/attachments/999294509223530597/1037111209108979732/Record_2022_11_01_23_06_23_255.gif`)
     if(parseInt(map.get(message.author.id)) > Date.now()) return message.reply({ content: `❌ توجد جولة بالفعل، عليك التحويل لإتمام الجولة معك 3 دقائق.` });
     map.set(message.author.id, Date.now() + 60000 * 3);
     message.reply({content: `c 773516646416384030 26316 ,${message.author}`, embeds: [embed]}).then(async msg => {
@@ -54,20 +58,20 @@ module.exports = {
         let a9 = ("15 الف.");
         let a10 = ("نيترو قيمنق.");
         let a12 = ("40 الف.");
-        setTimeout(() => msgg.edit(a1).catch(() => 0), 1000);
-        setTimeout(() => msgg.edit(a2).catch(() => 0), 1500);
-        setTimeout(() => msgg.edit(a3).catch(() => 0), 3500);
-        setTimeout(() => msgg.edit(a4).catch(() => 0), 4500);
-        setTimeout(() => msgg.edit(a5).catch(() => 0), 5500);
-        setTimeout(() => msgg.edit(a6).catch(() => 0), 6500);
-        setTimeout(() => msgg.edit(a7).catch(() => 0), 7500);
-        setTimeout(() => msgg.edit(a8).catch(() => 0), 8500);
-        setTimeout(() => msgg.edit(a9).catch(() => 0), 9500);
-        setTimeout(() => msgg.edit(a10).catch(() => 0), 10500);
-        setTimeout(() => msgg.edit(a12).catch(() => 0), 11500);
+        setTimeout(() => msgg.edit(${message.author , a1}).catch(() => 0), 1000);
+        setTimeout(() => msgg.edit(${message.author , a2}).catch(() => 0), 1500);
+        setTimeout(() => msgg.edit(${message.author , a3}).catch(() => 0), 3500);
+        setTimeout(() => msgg.edit(${message.author , a4}).catch(() => 0), 4500);
+        setTimeout(() => msgg.edit(${message.author , a5}).catch(() => 0), 5500);
+        setTimeout(() => msgg.edit(${message.author , a6}).catch(() => 0), 6500);
+        setTimeout(() => msgg.edit(${message.author , a7}).catch(() => 0), 7500);
+        setTimeout(() => msgg.edit(${message.author , a8}).catch(() => 0), 8500);
+        setTimeout(() => msgg.edit(${message.author , a9}).catch(() => 0), 9500);
+        setTimeout(() => msgg.edit(${message.author , a10}).catch(() => 0), 10500);
+        setTimeout(() => msgg.edit(${message.author , a12}).catch(() => 0), 11500);
         setTimeout(() => msgg.delete().catch(() => 0), 12500);
         let va1 = mess[Math.floor(Math.random() * mess.length)];
-        setTimeout(() => message.channel.send(`${va1}`).catch(() => 0), 13000);
+        setTimeout(() => message.channel.send(`${message.author , va1}`).catch(() => 0), 13000);
         setTimeout(() => message.channel.send(`${line}`).catch(() => 0), 13000);
       })
       map.set(message.author.id, 0);
