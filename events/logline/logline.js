@@ -15,9 +15,8 @@ module.exports = {
     قام الشخص : ${message.author.username} , بالنشر في روم ${message.channel}
     وجاري التحقق خلالل 5 دقائق للتاكد من ارسالة الخط إو لا في مدة 5 دقائق!**
     https://cdn.discordapp.com/attachments/986263839207211028/1026819732260798585/unknown.png`).then(async (msg) => {
-      const line = "خط";
-      let collect = await message.channel.awaitMessages({ filter: mm => mm.author.id == message.author.id && mm.content == line, max: 1, time: 60000 * 5, errors: ["time"] }).catch(() => {
-        map.set(message.author.id, 0);
+      const line1 = "خط";
+      let collect = await message.channel.awaitMessages({ filter: mm => mm.author.id == message.author.id && mm.content == line1, max: 1, time: 60000 * 5, errors: ["time"] }).catch(() => {
         msg.delete().catch(() => 0);
         let logline = new Discord.ButtonBuilder()
         .setStyle(Discord.ButtonStyle.Primary)
