@@ -1,4 +1,4 @@
-const { logcatogry, logline_room, logrool } = require("../../config.json");
+/*const { logcatogry, logline_room, logrool } = require("../../config.json");
 const config = require("../../config.json");
 const Discord = require("discord.js")
 const map = new Map();
@@ -42,3 +42,4 @@ module.exports = {
     })
   }
 }
+*/
