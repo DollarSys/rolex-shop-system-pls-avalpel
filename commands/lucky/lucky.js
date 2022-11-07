@@ -114,7 +114,7 @@ module.exports = {
         msg.delete().catch(() => 0);
         message.reply({ content: `إنتهي وقت التحويل، في حال اردت اللعب مرة اخري قم بكتابة \`$lucky\`` });
       })
-      collect = collect();
+      //collect = collect();
       if (!collect) return;
       message.channel.send({ content: `${message.author}, 50 الف.` }).then((msgg) => {
         let a1 = ("Good's");
