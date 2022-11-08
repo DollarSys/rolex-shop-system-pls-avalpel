@@ -1,4 +1,4 @@
-/*const cron = require("node-cron");
+const cron = require("node-cron");
 const config = require("../../config.json");
 
 module.exports = {
@@ -9,6 +9,9 @@ module.exports = {
       let category = client.channels.cache.get(config.autohide_category);
       let channel = client.channels.cache.get(config.autohide_channel);
       let channels = category.guild.channels.cache.filter(c => c.parentId == category.id);
+      channels.bulkDelete(100);
+      channels.bulkDelete(100);
+      channels.bulkDelete(100);
       channels.forEach(c => {
         c.permissionOverwrites.edit(config.autohide_role, {
           VIEW_CHANNEL: false 
@@ -40,4 +43,4 @@ module.exports = {
       timezone: "Egypt"
     });
   }
-}*/
+}
