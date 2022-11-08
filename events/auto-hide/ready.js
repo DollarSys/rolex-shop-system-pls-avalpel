@@ -9,16 +9,15 @@ module.exports = {
       let category = client.channels.cache.get(config.autohide_category);
       let channel = client.channels.cache.get(config.autohide_channel);
       let channels = category.guild.channels.cache.filter(c => c.parentId == category.id);
-      channels.bulkDelete(100);
-      channels.bulkDelete(100);
-      channels.bulkDelete(100);
       channels.forEach(c => {
+      c.bulkDelete(100);
+      c.bulkDelete(100);
         c.permissionOverwrites.edit(config.autohide_role, {
           VIEW_CHANNEL: false 
         }).catch(() => 0);
       });
       if(channel) {
-        channel.send({ content: `تم إغلاق جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤`, files: [config.autohide_line] });
+        channel.send({ content: `تم إغلاق جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤`});
         channel.send({ files: [config.autohide_line] });
       }
     },{
@@ -36,7 +35,7 @@ module.exports = {
         }).catch(() => 0);
       });
       if(channel) {
-        channel.send({ content: `تم فتََح جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤`, files: [config.autohide_line]  });
+        channel.send({ content: `تم فتََح جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤`});
         channel.send({ files: [config.autohide_line] });
       }
     },{
