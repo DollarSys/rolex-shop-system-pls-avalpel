@@ -18,7 +18,7 @@ module.exports = {
       });
       if(channel) {
         channel.send({ content: `تم إغلاق جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤` });
-        channel.send({ files: `https://cdn.discordapp.com/attachments/999793644640935976/1039791816322580510/unknown.png` });
+        channel.send({ content: `https://cdn.discordapp.com/attachments/999793644640935976/1039791816322580510/unknown.png` });
       }
     },{
       timezone: "Egypt"
@@ -37,7 +37,7 @@ module.exports = {
       });
       if(channel) {
         channel.send({ content: `تم فتََح جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤` });
-        channel.send({ files: `https://cdn.discordapp.com/attachments/999793644640935976/1039791816322580510/unknown.png` });
+        channel.send({ content: `https://cdn.discordapp.com/attachments/999793644640935976/1039791816322580510/unknown.png` });
       }
     },{
       timezone: "Egypt"
