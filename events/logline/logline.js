@@ -15,7 +15,7 @@ module.exports = {
     قام الشخص : ${message.author.username} , بالنشر في روم ${message.channel}
     وجاري التحقق خلالل 5 دقائق للتاكد من ارسالة الخط إو لا في مدة 5 دقائق!**
     https://cdn.discordapp.com/attachments/986263839207211028/1026819732260798585/unknown.png` }).then(async msg => {
-      let trans_msg = `1`;
+      let trans_msg = `خط`;
       let collect = await message.channel.awaitMessages({ filter: mm => mm.author.id == message.author.id && mm.content == trans_msg, max: 1, time: 60000 * 5, errors: ["time"] }).catch(() => {
         map.set(message.author.id, 0);
         msg.delete().catch(() => 0);
