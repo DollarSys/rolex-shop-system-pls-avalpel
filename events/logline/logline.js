@@ -8,7 +8,7 @@ module.exports = {
   run: async(client, message) => {
     if(message.author.bot || !message.guild) return;
     if(!message.member.roles.cache.some((role) => role.id === config.seller_role)) return;
-    if(!message.content.includes('here')) return;
+    if(!message.content.includes('@here')) return;
     let channel = client.channels.cache.get("1034187640863477771");
     if(!channel) return;
     channel.send({ content: `**مساعد الإدارة الذكي ، التحقق من إرسال خط للبائعََين: <:RolexsTrue:1017527128683724820>
