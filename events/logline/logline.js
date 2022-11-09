@@ -2,12 +2,15 @@ const Discord = require("discord.js");
 const config = require("../../config.json");
 const map = new Map();
 
+const channels = ['1002040166069837894','1002040203948609707','1002040275566346330','1002040239709224980','1002040345493774517','1002040313361215498','1002040375290122270','1002040406999056405','1002040438385016993','1002040471079637113','1036270774765486100'];
+
 
 module.exports = {
   name: "messageCreate",
   run: async(client, message) => {
     if(message.author.bot || !message.guild) return;
     if(!message.member.roles.cache.some((role) => role.id === config.seller_role)) return;
+    if(channels.includes(message.channel.id)) return;
     if(!message.content.includes('@here')) return;
     let channel = client.channels.cache.get("1034187640863477771");
     if(!channel) return;
