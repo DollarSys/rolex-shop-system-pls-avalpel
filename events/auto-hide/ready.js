@@ -13,12 +13,12 @@ module.exports = {
       c.bulkDelete(100);
       c.bulkDelete(100);
         c.permissionOverwrites.edit(config.autohide_role, {
-          VIEW_CHANNEL: false 
-        }).catch(() => 0);
+          ViewChannel: false 
+        }).catch(err => console.log(err));
       });
       if(channel) {
-        channel.send({ content: `تم إغلاق جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤`});
-        channel.send({ files: [config.autohide_line] });
+        channel.send({ content: `تم إغلاق جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤` });
+        channel.send({ files: `https://cdn.discordapp.com/attachments/999793644640935976/1039791816322580510/unknown.png` });
       }
     },{
       timezone: "Egypt"
@@ -28,15 +28,16 @@ module.exports = {
       let category = client.channels.cache.get(config.autohide_category);
       let channel = client.channels.cache.get(config.autohide_channel);
       let channels = category.guild.channels.cache.filter(c => c.parentId == category.id);
-      console.log(channels.size);
       channels.forEach(c => {
+      c.bulkDelete(100);
+      c.bulkDelete(100);
         c.permissionOverwrites.edit(config.autohide_role, {
-          VIEW_CHANNEL: true 
-        }).catch(() => 0);
+          ViewChannel: true 
+        }).catch(err => console.log(err));
       });
       if(channel) {
-        channel.send({ content: `تم فتََح جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤`});
-        channel.send({ files: [config.autohide_line] });
+        channel.send({ content: `تم فتََح جميع الرومات @here . \n اللهم صل وسلم وبارك على سيدنا محمد وعلى آله عدد حروف القرآن حرفاً حرفاً،❤` });
+        channel.send({ files: `https://cdn.discordapp.com/attachments/999793644640935976/1039791816322580510/unknown.png` });
       }
     },{
       timezone: "Egypt"
