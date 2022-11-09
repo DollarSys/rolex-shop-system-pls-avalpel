@@ -10,7 +10,7 @@ module.exports = {
   run: async(client, message) => {
     if(message.author.bot || !message.guild) return;
     if(!message.member.roles.cache.some((role) => role.id === config.seller_role)) return;
-    if(channels.includes(message.channel.id) && !message.content.includes('@here')) return;
+    if(!channels.includes(message.channel.id) && !message.content.includes('@here')) return;
     //if(!message.content.includes('@here')) return;
     let channel = client.channels.cache.get("1034187640863477771");
     if(!channel) return;
