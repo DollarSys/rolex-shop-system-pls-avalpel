@@ -1,4 +1,4 @@
-const { logcatogry, logwards_room, logrool } = require("../../config.json");
+/*const { logcatogry, logwards_room, logrool } = require("../../config.json");
 const config = require("../../config.json");
 const Discord = require("discord.js")
 const words = ["متجر","شوب","بيع","شراء","حساب","اكونت","حسابات","نيترو","سعر","اكونتات","نيترو","نيتروهات","سيرفر","متوفر","سيرفرات","كراك","تكريك","هكر","توكنات","توكن","@everyone"];
@@ -46,3 +46,5 @@ module.exports = {
     }
   }
 }
+
+*/
