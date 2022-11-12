@@ -48,7 +48,7 @@ module.exports = {
           collect2 = collect2.first();
           if (!collect2) return;
           collect2.delete().catch(() => 0);
-          msg2.delete().catch(() => 0);
+          //msg2.delete().catch(() => 0);
           map.set(message.author.id, 0);
           message.member.roles.add(value.role).then(() => {
             message.member.roles.add(config.seller_role).catch(() => 0);
