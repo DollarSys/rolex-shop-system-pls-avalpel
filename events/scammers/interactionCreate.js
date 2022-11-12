@@ -33,7 +33,8 @@ module.exports = {
 القصة: **${data.story}**
 \`===========================\`
 الدلائل:`)
-      await channel.send({ content: `<@&${config.scammer_role}> **بلاع علي نصاب.**`, embeds: [embed], files: `${data.photos.join("\n")}` })
+      await channel.send({ content: `<@&${config.scammer_role}> **بلاع علي نصاب.**`, embeds: [embed]})
+      // , files: `${data.photos.join("\n")}` 
       await channel.send({ content: `وانت الإن يمكنك التبليغ علي اي شخص نصب عليك عن طريقة كتابة ، \`#بلاغ\` هنا <#1034108906076651550>` })
       data.status = true;
       await data.save().catch(() => 0);
