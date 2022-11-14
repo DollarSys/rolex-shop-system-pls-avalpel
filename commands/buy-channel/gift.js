@@ -5,7 +5,7 @@ const config = require("../../config.json");
 const private_time = 7 * 86400000;
 
 module.exports = {
-  name: "buy-room",
+  name: "gift",
   run: async(client, message, args) => {
     if(!message.member.roles.cache.has(config.scammer_admin1)) return;
     let data = await db.findOne({
