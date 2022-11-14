@@ -4,7 +4,7 @@ const config = require("../../config.json");
 module.exports = {
   name: "طلب",
   run: async(client, message, args) => {
-    if(!message.channel.name.startsWith("・〡الـطلبات")) return message.reply(`لا يمكنك الطلب هنا ، قم بالطلب في روم <#${config.order_room}>`).then(async (m) => {
+    if(!message.channel.name.startsWith("・〡الـطلبات")) return message.reply(`لا يمكنك الطلب هنا ، قم بالطلب في روم <#${config.order_room}>`).catch(err => 0).then(async (m) => {
       await message.react("❌").catch(err => 0)
         setTimeout(() => m.delete().catch(err => 0), 3000) 
   })
@@ -73,7 +73,7 @@ module.exports = {
           await message.reply({ content: `${message.author}, ✅ **تم إرسال هذا الطلب إلي البائعين بنجاح.**`, ephemeral: true }).catch(err => 0).then(async (msg2)=> {
             let channel = message.guild.channels.cache.get(config.order_room_send);
             if(!channel) return;
-            channel.send({ content: `** :طلب جديد من ${message.author} - <@&${config.order_mention_role}> ** <:RolexsPin:1012969637597675600>`, embeds: [ordernew1] })
+            channel.send({ content: `** :طلب جديد من ${message.author} - <@&${config.order_mention_role}> ** <:RolexsPin:1012969637597675600>`, embeds: [ordernew1] }).catch(err => 0)
           setTimeout(() => message.delete().catch(err => 0), 1000)
           setTimeout(() => msg2.delete().catch(err => 0), 3000);           
         })
